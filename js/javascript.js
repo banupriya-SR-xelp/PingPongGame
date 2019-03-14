@@ -40,7 +40,7 @@ var canvas = document.getElementById("canvas"),
   multipler = 1, // Varialbe to control the direction of sparks
   startBtn = {}, // Start button object
   restartBtn = {}, // Restart button object
-  over = 0, // flag varialbe, cahnged when the game is over
+  over = 0, // flag varialbe, changed when the game is over
   init, // variable to initialize animation
   paddleHit;
 level = 1;
@@ -162,14 +162,12 @@ function draw() {
 
 // Function to increase speed after every 8 points
 function increaseSpd() {
-  console.log(points);
   if (points % 8 == 0) {
     level++;
     var d = document.getElementById("level");
     d.innerHTML = "You are now Level" + level;
 
     // window.alert("You are now Level" + level);
-    console.log("level is" + level);
 
     if (Math.abs(ball.vx) < 15) {
       ball.vx += ball.vx < 0 ? -1 : 1;
